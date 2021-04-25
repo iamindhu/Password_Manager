@@ -30,4 +30,4 @@ validator
 6. run the following command to start the server
 ```
 npm start
-``
+```
