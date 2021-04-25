@@ -2,8 +2,8 @@
 
 ### Project setup
 
-1.Install Node
-2.Install npm
+1.Install Node\
+2.Install npm\
 3. Run the following command to create package.json file
 ```
 npm init
