@@ -88,7 +88,7 @@ const credError = document.getElementById('cred_error')
       }
     }
     catch (err) {
-       console.log(err);
+      //  console.log(err);
       credError.textContent = err;
     }
   });
@@ -122,7 +122,7 @@ const lpasswordError = document.getElementById('password_error_login');
         headers: {'Content-Type': 'application/json'}
       });
       const data = await res.json();
-      console.log(data);
+      //console.log(data);
       if (data.errors) {
         lnameError.textContent = data.errors.username;
         lpasswordError.textContent = data.errors.password;
@@ -132,6 +132,6 @@ const lpasswordError = document.getElementById('password_error_login');
       }
     }
     catch (err) {
-      console.log(err);
+      credError.textContent = err;
     }
   });
