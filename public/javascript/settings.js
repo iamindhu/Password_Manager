@@ -42,6 +42,7 @@ function change(id){
 	var phone_pattern = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
   var email_regularExpression=/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
   if(id=="button-username"){  
+    document.getElementById("prompt_input").type = "text";
       showPrompt("Enter new username", function(value){
         if(!username_pattern.test(value)){
           error.innerHTML='username should not have spaces';
@@ -59,6 +60,7 @@ function change(id){
     
   }
   if(id=="button-email"){
+    document.getElementById("prompt_input").type = "email";
       showPrompt("Enter new email", function(value){
         if(!email_regularExpression.test(value)){
           error.innerHTML= 'Please enter a valid e-mail address';
@@ -71,6 +73,7 @@ function change(id){
     
   }
   if(id=="button-number"){
+    document.getElementById("prompt_input").type = "tel";
       showPrompt("Enter new number", function(value){
         if(!phone_pattern.test(value)){
           error.innerHTML= 'It is not valid mobile number';

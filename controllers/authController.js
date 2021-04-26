@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const nodemailer=require('nodemailer');
 // handle errors
 const handleErrors = (err) => {
-  console.log(err.message, err.code);
+//  console.log(err.message, err.code);
   let errors = { email: '', password: '', mobile: '', username:'', cred:''};
 
   // duplicate error

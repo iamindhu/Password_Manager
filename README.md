@@ -19,7 +19,6 @@ cookie-parser
 crypto
 dotenv
 ejs
-email-existence
 express
 jsonwebtoken
 moment
