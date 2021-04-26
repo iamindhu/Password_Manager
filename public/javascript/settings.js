@@ -7,6 +7,7 @@ confirm_button.addEventListener("click",()=>{
   
 });
 function showform(){
+  document.getElementById("prompt_input").type = "password";
   error.innerHTML="";
   showPrompt("Enter Master Password ", function(value) {
     let password = value;
