@@ -12,7 +12,7 @@ npm init
 ```
 npm install --save-dev nodemon
 ```
-5. Install all the packages given below ( npm install package_name --save)
+5. Install all the packages given below ( npm install package_name)
 ```
 bcrypt
 cookie-parser
