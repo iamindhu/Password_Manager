@@ -2,8 +2,8 @@
 
 ### Project setup
 
-1.Install Node
-2.Install npm
+1.Install Node\
+2.Install npm\
 3. Run the following command to create package.json file
 ```
 npm init
@@ -26,4 +26,8 @@ moment
 mongoose
 nodemailer
 validator
+```
+6. run the following command to start the server
+```
+npm start
 ```
