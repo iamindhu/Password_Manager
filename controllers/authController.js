@@ -169,6 +169,7 @@ module.exports.forgotpassword_get=(req,res)=>{
 module.exports.forgotpassword_post= async (req,res)=>{
   const {email} = req.body;
    const user=await User.findOne({email:email});
+   try{
      if(user!=null){
       const token=jwt.sign({_id:user._id},process.env.RESET_PASSWORD_KEY,{expiresIn: '10m'});
         var transporter= nodemailer.createTransport({
@@ -208,6 +209,10 @@ module.exports.forgotpassword_post= async (req,res)=>{
       res.status(200).json({ status:"email not registered"});  
 
      }
+    }
+    catch(err){
+      console.log(err);
+    }
 }
 
 
