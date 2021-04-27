@@ -173,7 +173,9 @@ module.exports.forgotpassword_post= async (req,res)=>{
      if(user!=null){
       const token=jwt.sign({_id:user._id},process.env.RESET_PASSWORD_KEY,{expiresIn: '10m'});
         var transporter= nodemailer.createTransport({
-          service: 'gmail',
+          host: 'smtp.gmail.com',
+          port:465,
+          secure:true,
           auth: {
             user: 'hackthis404@gmail.com',
             pass: 'hackifucan404'
