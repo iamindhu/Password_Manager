@@ -13,6 +13,7 @@
     "moment": "^2.29.1",
     "mongoose": "^5.12.2",
     "nodemailer": "^6.5.0",
+    "save": "^2.4.0",
     "validator": "^13.5.2"
   },
   "scripts": {
